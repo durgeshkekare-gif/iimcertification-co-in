@@ -1,1 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#1E40AF"/><text x="32" y="43" text-anchor="middle" font-family="Arial Black,sans-serif" font-weight="900" font-size="26" fill="#2563EB">IIM</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#g)"/>
+  <!-- Outer ring -->
+  <circle cx="32" cy="32" r="22" fill="none" stroke="#2563EB" stroke-width="2" opacity="0.5"/>
+  <!-- Inner fill -->
+  <circle cx="32" cy="32" r="18" fill="#2563EB" opacity="0.1"/>
+  <!-- IIM text -->
+  <text x="32" y="30" text-anchor="middle" font-family="Arial Black,sans-serif" font-weight="900" font-size="14" fill="#3B82F6" letter-spacing="1">IIM</text>
+  <!-- Divider -->
+  <rect x="20" y="33" width="24" height="1.5" rx="1" fill="#2563EB" opacity="0.5"/>
+  <!-- CERT text -->
+  <text x="32" y="45" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="8" fill="#94A3B8" letter-spacing="2">CERT</text>
+</svg>
