@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Sitemap: https://iimcertification.co.in/sitemap.xml
+Crawl-delay: 1
