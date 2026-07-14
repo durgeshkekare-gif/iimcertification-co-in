@@ -25,7 +25,7 @@
 .cfp.on{background:#2563EB;color:#fff;border-color:#2563EB;}
 .filter-wrap{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1.25rem;}
 .ctable{width:100%;border-collapse:collapse;font-size:.8rem;}
-.ctable th{background:#0F172A;color:#fff;padding:.65rem .85rem;text-align:left;font-weight:600;font-size:.72rem;letter-spacing:.02em;position:sticky;top:60px;z-index:10;}
+.ctable th{background:#0F172A;color:#fff;padding:.65rem .85rem;text-align:left;font-weight:600;font-size:.72rem;letter-spacing:.02em;}
 .ctable td{border-bottom:1px solid #F1F5F9;vertical-align:middle;}
 .ctable tr:hover td{background:#EFF6FF !important;}
 .ctable-wrap{overflow-x:auto;border-radius:12px;border:1px solid #E2E8F0;box-shadow:0 2px 12px rgba(15,23,42,.06);}
@@ -403,6 +403,12 @@ function filterTable(cat, btn) {
   document.querySelectorAll('#compTable tbody tr').forEach(row => {
     row.style.display = (cat === 'all' || row.dataset.cat === cat) ? '' : 'none';
   });
+  // Scroll table into view cleanly so first row isn't hidden behind nav
+  var wrap = document.querySelector('.ctable-wrap');
+  if (wrap) {
+    var top = wrap.getBoundingClientRect().top + window.scrollY - 80;
+    window.scrollTo({ top: top, behavior: 'smooth' });
+  }
 }
 </script>
 </body></html>
