@@ -41,5 +41,18 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.iimcertification.co.in"
+        }
+      ],
+      "destination": "https://iimcertification.co.in/:path*",
+      "permanent": true
+    }
   ]
 }
